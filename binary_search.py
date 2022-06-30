@@ -11,5 +11,18 @@ def binary_search(list, target):
         # Number is lower, set last to 1 integer to the left of mid_pt, first no change
         else:
             last = mid_pt - 1
-
     return None
+
+def verify(index):
+    if index is not None:
+        print('Target found at index: ', index)
+    else:
+        print('Target not found in list')
+
+
+numbers = [n for n in range(1,11)]
+result = binary_search(numbers, 12)
+verify(result)
+
+result = binary_search(numbers, 6)
+verify(result)
